@@ -1,0 +1,44 @@
+div#datelist{
+    width: 25%;
+    display: inline;
+
+}
+
+div#list{
+    width: 35%;
+    display: inline;
+}
+
+input#inputDo{
+    width: 40%;
+    height: 4%;
+}
+
+input#date{
+    width: 30%;
+    height: 4%;
+}
+
+
+
+div#zentai{
+    text-align: center;
+}
+
+body{
+    background-color: blanchedalmond;
+}
+
+button{
+    width: 8%;
+    height: 4%;
+   
+}
+
+ul{
+    list-style: none;
+}
+
+li#listAll{
+    left: 100px;
+}
