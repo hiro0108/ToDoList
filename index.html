@@ -2,30 +2,45 @@
     <html lang="ja">
         <head>
             <meta charset="UTF-8">
-            <title>TODOリスト</title>
+            <title>TODOリスト</title>   
             <link rel="stylesheet" href="todo.css">
+            <script type="text/javascript" src="js/jquery-3.5.1.min.js"></script>
+            <script type="text/javascript" src="js/jquery.tablesorter.min.js"></script>
             <script type="text/javascript" src="todo.js"></script>
         </head>
         <body>
+            
             <div class="container" id="zentai">
                 <h1>To Do List</h1>
                 <h2>使用マニュアル</h2>
                 <div>
-                    ・期日は半角数字で入力(例)1225
+                    ・年と期日は半角数字で入力(例)1225
                     <br>・「追加」は上記二つを入力した際にクリック(TODOリストが作成される)
                     <br>・「削除」終わった項目はチェックボックスにチェックを入れてクリックすると削除される
                     <br>・「読取」はページをリロードした時や、一度閉じたあと再度開く時にクリックすると前までのTODOリストがロードされる
-                    
+                    <br>・期日順に並べるには「期日」をクリックする
             </div>
            
-            <br><label>やること<input type="text" id="inputDo" name="textbox" placeholder="やることを入力してください">
-                    <label>　期日<input type="text" id="date" maxlength="4" placeholder="期日を入力してください">
-                    <br><button onclick="addList('inputDo', 'date')" id="add">追加</button>
-                    <button onclick="removeList()" id="remove">削除</button>
-                    <button onclick="load('todoList')" id="load">読取</button>
-                    <ul id="todoLists">
-
-                    </ul>
+            <br><input type="text" id="inputDo" name="textbox" placeholder="やることを入力">
+            <input type="text" id="year" maxlength="4" placeholder="年を入力">
+            <input type="text" id="date" name="datebox" maxlength="4" placeholder="期日を入力">
+            <br><button onclick="addList('inputDo', 'date')" id="add">追加</button>
+            <button onclick="removeList()" id="remove">削除</button>
+            <button onclick="load('todoList')" id="load">読取</button>
+            <div>
+                <table border="1" id="myTable" class="tablesorter" align="center">
+                    <thead>    
+                        <tr>
+                            <th id="check">チェック</th>
+                            <th id="do">やること</th>
+                            <th id="day">期日</th>
+                        </tr>
+                    </thead>
+                    <tbody id="todoLists">
+                        
+                    </tbody>
+                </table>
+            </div>
                     
             </div>
 
