@@ -1,24 +1,36 @@
 div#datelist{
     width: 25%;
     display: inline;
-
+    text-align: center;
 }
 
 div#list{
     width: 35%;
     display: inline;
+    text-align: center;
 }
 
 input#inputDo{
-    width: 40%;
+    width: 50%;
     height: 4%;
+    font-size: 100%;
 }
 
 input#date{
-    width: 30%;
+    width: 20%;
     height: 4%;
+    font-size: 100%;
 }
 
+input#check{
+    width: 70%;
+}
+
+input#year{
+    width: 20%;
+    height: 4%;
+    font-size: 100%;
+}
 
 
 div#zentai{
@@ -30,7 +42,7 @@ body{
 }
 
 button{
-    width: 8%;
+    width: 9%;
     height: 4%;
    
 }
@@ -41,4 +53,20 @@ ul{
 
 li#listAll{
     left: 100px;
+}
+
+table#myTable{
+    width: 90%;
+    text-align: center;
+}
+
+th#check{
+    width: 15%;
+}
+th#do{
+    width: 60%;
+}
+th#day{
+    width: 25%;
+    background-color: coral;
 }
